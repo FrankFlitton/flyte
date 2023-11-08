@@ -16,5 +16,10 @@
     "example",
     "protos",
     "gen/pb-js"
-  ]
+  ],
+  "devDependencies": {
+    "@bufbuild/buf": "^1.27.2",
+    "@bufbuild/protobuf": "^1.4.2",
+    "@bufbuild/protoc-gen-es": "^1.4.2"
+  }
 }
