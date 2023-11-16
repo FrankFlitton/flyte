@@ -41,9 +41,6 @@ executionRequest.name = "my-task"
 const executionSpec = new AdminExecutionSpec()
 executionSpec.metadata = new AdminExecutionMetadata();
 
-flyteAdmin
-  .createExecution
-
 
 // idProject: string, idDomain: string, idName?: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminExecutionList;  }>
 // flyteAdmin.listExecutions(

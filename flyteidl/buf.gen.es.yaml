@@ -1,0 +1,12 @@
+version: v1
+plugins:
+  - plugin: es
+    out: gen/es
+    opt:
+      - target=js+dts+ts
+      - keep_empty_files=false
+  - plugin: connect-es
+    out: gen/es
+    opt:
+      # Add more plugin options here
+      - target=js+dts+ts
