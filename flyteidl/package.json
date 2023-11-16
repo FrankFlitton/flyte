@@ -19,7 +19,8 @@
   ],
   "scripts": {
     "generate": "npx buf generate --template buf.gen.es.yaml",
-    "test:es": "npx ts-node ./test.es.ts"
+    "test:es": "npx ts-node ./test.es.ts",
+    "test": "npx ts-node ./test.ts"
   },
   "devDependencies": {
     "@bufbuild/buf": "^1.28.1",
@@ -29,6 +30,7 @@
   },
   "dependencies": {
     "@connectrpc/connect": "^1.1.3",
+    "@connectrpc/connect-node": "^1.1.3",
     "@connectrpc/connect-web": "^1.1.3",
     "bluebird": "^3.7.2",
     "protobufjs": "^7.2.5",

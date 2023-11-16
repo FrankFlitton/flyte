@@ -12,7 +12,6 @@
 
 import localVarRequest = require('request');
 import http = require('http');
-import Promise = require('bluebird');
 
 let defaultBasePath = 'http://localhost';
 
@@ -9399,7 +9398,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public createExecution (body: AdminExecutionCreateRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminExecutionCreateResponse;  }> {
+    public createExecution (body: AdminExecutionCreateRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminExecutionCreateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/executions';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -9433,7 +9432,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminExecutionCreateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminExecutionCreateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9454,7 +9453,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public createLaunchPlan (body: AdminLaunchPlanCreateRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminLaunchPlanCreateResponse;  }> {
+    public createLaunchPlan (body: AdminLaunchPlanCreateRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminLaunchPlanCreateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/launch_plans';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -9488,7 +9487,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminLaunchPlanCreateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminLaunchPlanCreateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9509,7 +9508,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public createNodeEvent (body: AdminNodeExecutionEventRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminNodeExecutionEventResponse;  }> {
+    public createNodeEvent (body: AdminNodeExecutionEventRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminNodeExecutionEventResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/events/nodes';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -9543,7 +9542,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminNodeExecutionEventResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminNodeExecutionEventResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9564,7 +9563,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public createTask (body: FlyteidladminTaskCreateRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: FlyteidladminTaskCreateResponse;  }> {
+    public createTask (body: FlyteidladminTaskCreateRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: FlyteidladminTaskCreateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/tasks';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -9598,7 +9597,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: FlyteidladminTaskCreateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: FlyteidladminTaskCreateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9619,7 +9618,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public createTaskEvent (body: AdminTaskExecutionEventRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminTaskExecutionEventResponse;  }> {
+    public createTaskEvent (body: AdminTaskExecutionEventRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminTaskExecutionEventResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/events/tasks';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -9653,7 +9652,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminTaskExecutionEventResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminTaskExecutionEventResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9674,7 +9673,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public createWorkflow (body: AdminWorkflowCreateRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminWorkflowCreateResponse;  }> {
+    public createWorkflow (body: AdminWorkflowCreateRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminWorkflowCreateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/workflows';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -9708,7 +9707,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminWorkflowCreateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminWorkflowCreateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9729,7 +9728,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public createWorkflowEvent (body: AdminWorkflowExecutionEventRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminWorkflowExecutionEventResponse;  }> {
+    public createWorkflowEvent (body: AdminWorkflowExecutionEventRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminWorkflowExecutionEventResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/events/workflows';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -9763,7 +9762,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminWorkflowExecutionEventResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminWorkflowExecutionEventResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9785,7 +9784,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public deleteProjectAttributes (project: string, body: AdminProjectAttributesDeleteRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminProjectAttributesDeleteResponse;  }> {
+    public deleteProjectAttributes (project: string, body: AdminProjectAttributesDeleteRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminProjectAttributesDeleteResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/project_attributes/{project}'
             .replace('{' + 'project' + '}', encodeURIComponent(String(project)));
         let localVarQueryParameters: any = {};
@@ -9825,7 +9824,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminProjectAttributesDeleteResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminProjectAttributesDeleteResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9848,7 +9847,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public deleteProjectDomainAttributes (project: string, domain: string, body: AdminProjectDomainAttributesDeleteRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminProjectDomainAttributesDeleteResponse;  }> {
+    public deleteProjectDomainAttributes (project: string, domain: string, body: AdminProjectDomainAttributesDeleteRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminProjectDomainAttributesDeleteResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/project_domain_attributes/{project}/{domain}'
             .replace('{' + 'project' + '}', encodeURIComponent(String(project)))
             .replace('{' + 'domain' + '}', encodeURIComponent(String(domain)));
@@ -9894,7 +9893,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminProjectDomainAttributesDeleteResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminProjectDomainAttributesDeleteResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9918,7 +9917,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public deleteWorkflowAttributes (project: string, domain: string, workflow: string, body: AdminWorkflowAttributesDeleteRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminWorkflowAttributesDeleteResponse;  }> {
+    public deleteWorkflowAttributes (project: string, domain: string, workflow: string, body: AdminWorkflowAttributesDeleteRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminWorkflowAttributesDeleteResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/workflow_attributes/{project}/{domain}/{workflow}'
             .replace('{' + 'project' + '}', encodeURIComponent(String(project)))
             .replace('{' + 'domain' + '}', encodeURIComponent(String(domain)))
@@ -9970,7 +9969,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminWorkflowAttributesDeleteResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminWorkflowAttributesDeleteResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9993,7 +9992,7 @@ export class AdminServiceApi {
      * @param idName User provided value for the resource. The combination of project + domain + name uniquely identifies the resource. +optional - in certain contexts - like &#39;List API&#39;, &#39;Launch plans&#39;
      * @param {*} [options] Override http request options.
      */
-    public getActiveLaunchPlan (idProject: string, idDomain: string, idName: string, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminLaunchPlan;  }> {
+    public getActiveLaunchPlan (idProject: string, idDomain: string, idName: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminLaunchPlan;  }> {
         const localVarPath = this.basePath + '/api/v1/active_launch_plans/{id.project}/{id.domain}/{id.name}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)))
@@ -10039,7 +10038,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminLaunchPlan;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminLaunchPlan;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10064,7 +10063,7 @@ export class AdminServiceApi {
      * @param idVersion Specific version of the resource.
      * @param {*} [options] Override http request options.
      */
-    public getDescriptionEntity (idResourceType: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', idProject: string, idDomain: string, idName: string, idVersion: string, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminDescriptionEntity;  }> {
+    public getDescriptionEntity (idResourceType: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', idProject: string, idDomain: string, idName: string, idVersion: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminDescriptionEntity;  }> {
         const localVarPath = this.basePath + '/api/v1/description_entities/{id.resource_type}/{id.project}/{id.domain}/{id.name}/{id.version}'
             .replace('{' + 'id.resource_type' + '}', encodeURIComponent(String(idResourceType)))
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
@@ -10122,7 +10121,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminDescriptionEntity;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminDescriptionEntity;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10145,7 +10144,7 @@ export class AdminServiceApi {
      * @param idName User or system provided value for the resource.
      * @param {*} [options] Override http request options.
      */
-    public getExecution (idProject: string, idDomain: string, idName: string, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminExecution;  }> {
+    public getExecution (idProject: string, idDomain: string, idName: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminExecution;  }> {
         const localVarPath = this.basePath + '/api/v1/executions/{id.project}/{id.domain}/{id.name}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)))
@@ -10191,7 +10190,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminExecution;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminExecution;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10214,7 +10213,7 @@ export class AdminServiceApi {
      * @param idName User or system provided value for the resource.
      * @param {*} [options] Override http request options.
      */
-    public getExecutionData (idProject: string, idDomain: string, idName: string, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminWorkflowExecutionGetDataResponse;  }> {
+    public getExecutionData (idProject: string, idDomain: string, idName: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminWorkflowExecutionGetDataResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/data/executions/{id.project}/{id.domain}/{id.name}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)))
@@ -10260,7 +10259,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminWorkflowExecutionGetDataResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminWorkflowExecutionGetDataResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10284,7 +10283,7 @@ export class AdminServiceApi {
      * @param depth depth defines the number of Flyte entity levels to traverse when breaking down execution details.
      * @param {*} [options] Override http request options.
      */
-    public getExecutionMetrics (idProject: string, idDomain: string, idName: string, depth?: number, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminWorkflowExecutionGetMetricsResponse;  }> {
+    public getExecutionMetrics (idProject: string, idDomain: string, idName: string, depth?: number, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminWorkflowExecutionGetMetricsResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/metrics/executions/{id.project}/{id.domain}/{id.name}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)))
@@ -10334,7 +10333,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminWorkflowExecutionGetMetricsResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminWorkflowExecutionGetMetricsResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10359,7 +10358,7 @@ export class AdminServiceApi {
      * @param idResourceType Identifies the specific type of resource that this identifier corresponds to.   - DATASET: A dataset represents an entity modeled in Flyte DataCatalog. A Dataset is also a versioned entity and can be a compilation of multiple individual objects. Eventually all Catalog objects should be modeled similar to Flyte Objects. The Dataset entities makes it possible for the UI  and CLI to act on the objects  in a similar manner to other Flyte objects
      * @param {*} [options] Override http request options.
      */
-    public getLaunchPlan (idProject: string, idDomain: string, idName: string, idVersion: string, idResourceType?: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminLaunchPlan;  }> {
+    public getLaunchPlan (idProject: string, idDomain: string, idName: string, idVersion: string, idResourceType?: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminLaunchPlan;  }> {
         const localVarPath = this.basePath + '/api/v1/launch_plans/{id.project}/{id.domain}/{id.name}/{id.version}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)))
@@ -10415,7 +10414,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminLaunchPlan;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminLaunchPlan;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10439,7 +10438,7 @@ export class AdminServiceApi {
      * @param idName User provided value for the resource. The combination of project + domain + name uniquely identifies the resource. +optional - in certain contexts - like &#39;List API&#39;, &#39;Launch plans&#39;
      * @param {*} [options] Override http request options.
      */
-    public getNamedEntity (resourceType: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', idProject: string, idDomain: string, idName: string, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminNamedEntity;  }> {
+    public getNamedEntity (resourceType: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', idProject: string, idDomain: string, idName: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminNamedEntity;  }> {
         const localVarPath = this.basePath + '/api/v1/named_entities/{resource_type}/{id.project}/{id.domain}/{id.name}'
             .replace('{' + 'resource_type' + '}', encodeURIComponent(String(resourceType)))
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
@@ -10491,7 +10490,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminNamedEntity;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminNamedEntity;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10515,7 +10514,7 @@ export class AdminServiceApi {
      * @param idNodeId 
      * @param {*} [options] Override http request options.
      */
-    public getNodeExecution (idExecutionIdProject: string, idExecutionIdDomain: string, idExecutionIdName: string, idNodeId: string, options: any = {}) : Promise<{ response: http.ClientResponse; body: FlyteidladminNodeExecution;  }> {
+    public getNodeExecution (idExecutionIdProject: string, idExecutionIdDomain: string, idExecutionIdName: string, idNodeId: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: FlyteidladminNodeExecution;  }> {
         const localVarPath = this.basePath + '/api/v1/node_executions/{id.execution_id.project}/{id.execution_id.domain}/{id.execution_id.name}/{id.node_id}'
             .replace('{' + 'id.execution_id.project' + '}', encodeURIComponent(String(idExecutionIdProject)))
             .replace('{' + 'id.execution_id.domain' + '}', encodeURIComponent(String(idExecutionIdDomain)))
@@ -10567,7 +10566,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: FlyteidladminNodeExecution;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: FlyteidladminNodeExecution;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10591,7 +10590,7 @@ export class AdminServiceApi {
      * @param idNodeId 
      * @param {*} [options] Override http request options.
      */
-    public getNodeExecutionData (idExecutionIdProject: string, idExecutionIdDomain: string, idExecutionIdName: string, idNodeId: string, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminNodeExecutionGetDataResponse;  }> {
+    public getNodeExecutionData (idExecutionIdProject: string, idExecutionIdDomain: string, idExecutionIdName: string, idNodeId: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminNodeExecutionGetDataResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/data/node_executions/{id.execution_id.project}/{id.execution_id.domain}/{id.execution_id.name}/{id.node_id}'
             .replace('{' + 'id.execution_id.project' + '}', encodeURIComponent(String(idExecutionIdProject)))
             .replace('{' + 'id.execution_id.domain' + '}', encodeURIComponent(String(idExecutionIdDomain)))
@@ -10643,7 +10642,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminNodeExecutionGetDataResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminNodeExecutionGetDataResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10665,7 +10664,7 @@ export class AdminServiceApi {
      * @param resourceType Which type of matchable attributes to return. +required.   - TASK_RESOURCE: Applies to customizable task resource requests and limits.  - CLUSTER_RESOURCE: Applies to configuring templated kubernetes cluster resources.  - EXECUTION_QUEUE: Configures task and dynamic task execution queue assignment.  - EXECUTION_CLUSTER_LABEL: Configures the K8s cluster label to be used for execution to be run  - QUALITY_OF_SERVICE_SPECIFICATION: Configures default quality of service when undefined in an execution spec.  - PLUGIN_OVERRIDE: Selects configurable plugin implementation behavior for a given task type.  - WORKFLOW_EXECUTION_CONFIG: Adds defaults for customizable workflow-execution specifications and overrides.  - CLUSTER_ASSIGNMENT: Controls how to select an available cluster on which this execution should run.
      * @param {*} [options] Override http request options.
      */
-    public getProjectAttributes (project: string, resourceType?: 'TASK_RESOURCE' | 'CLUSTER_RESOURCE' | 'EXECUTION_QUEUE' | 'EXECUTION_CLUSTER_LABEL' | 'QUALITY_OF_SERVICE_SPECIFICATION' | 'PLUGIN_OVERRIDE' | 'WORKFLOW_EXECUTION_CONFIG' | 'CLUSTER_ASSIGNMENT', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminProjectAttributesGetResponse;  }> {
+    public getProjectAttributes (project: string, resourceType?: 'TASK_RESOURCE' | 'CLUSTER_RESOURCE' | 'EXECUTION_QUEUE' | 'EXECUTION_CLUSTER_LABEL' | 'QUALITY_OF_SERVICE_SPECIFICATION' | 'PLUGIN_OVERRIDE' | 'WORKFLOW_EXECUTION_CONFIG' | 'CLUSTER_ASSIGNMENT', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminProjectAttributesGetResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/project_attributes/{project}'
             .replace('{' + 'project' + '}', encodeURIComponent(String(project)));
         let localVarQueryParameters: any = {};
@@ -10703,7 +10702,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminProjectAttributesGetResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminProjectAttributesGetResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10726,7 +10725,7 @@ export class AdminServiceApi {
      * @param resourceType Which type of matchable attributes to return. +required.   - TASK_RESOURCE: Applies to customizable task resource requests and limits.  - CLUSTER_RESOURCE: Applies to configuring templated kubernetes cluster resources.  - EXECUTION_QUEUE: Configures task and dynamic task execution queue assignment.  - EXECUTION_CLUSTER_LABEL: Configures the K8s cluster label to be used for execution to be run  - QUALITY_OF_SERVICE_SPECIFICATION: Configures default quality of service when undefined in an execution spec.  - PLUGIN_OVERRIDE: Selects configurable plugin implementation behavior for a given task type.  - WORKFLOW_EXECUTION_CONFIG: Adds defaults for customizable workflow-execution specifications and overrides.  - CLUSTER_ASSIGNMENT: Controls how to select an available cluster on which this execution should run.
      * @param {*} [options] Override http request options.
      */
-    public getProjectDomainAttributes (project: string, domain: string, resourceType?: 'TASK_RESOURCE' | 'CLUSTER_RESOURCE' | 'EXECUTION_QUEUE' | 'EXECUTION_CLUSTER_LABEL' | 'QUALITY_OF_SERVICE_SPECIFICATION' | 'PLUGIN_OVERRIDE' | 'WORKFLOW_EXECUTION_CONFIG' | 'CLUSTER_ASSIGNMENT', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminProjectDomainAttributesGetResponse;  }> {
+    public getProjectDomainAttributes (project: string, domain: string, resourceType?: 'TASK_RESOURCE' | 'CLUSTER_RESOURCE' | 'EXECUTION_QUEUE' | 'EXECUTION_CLUSTER_LABEL' | 'QUALITY_OF_SERVICE_SPECIFICATION' | 'PLUGIN_OVERRIDE' | 'WORKFLOW_EXECUTION_CONFIG' | 'CLUSTER_ASSIGNMENT', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminProjectDomainAttributesGetResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/project_domain_attributes/{project}/{domain}'
             .replace('{' + 'project' + '}', encodeURIComponent(String(project)))
             .replace('{' + 'domain' + '}', encodeURIComponent(String(domain)));
@@ -10770,7 +10769,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminProjectDomainAttributesGetResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminProjectDomainAttributesGetResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10795,7 +10794,7 @@ export class AdminServiceApi {
      * @param idResourceType Identifies the specific type of resource that this identifier corresponds to.   - DATASET: A dataset represents an entity modeled in Flyte DataCatalog. A Dataset is also a versioned entity and can be a compilation of multiple individual objects. Eventually all Catalog objects should be modeled similar to Flyte Objects. The Dataset entities makes it possible for the UI  and CLI to act on the objects  in a similar manner to other Flyte objects
      * @param {*} [options] Override http request options.
      */
-    public getTask (idProject: string, idDomain: string, idName: string, idVersion: string, idResourceType?: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminTask;  }> {
+    public getTask (idProject: string, idDomain: string, idName: string, idVersion: string, idResourceType?: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminTask;  }> {
         const localVarPath = this.basePath + '/api/v1/tasks/{id.project}/{id.domain}/{id.name}/{id.version}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)))
@@ -10851,7 +10850,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminTask;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminTask;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10881,7 +10880,7 @@ export class AdminServiceApi {
      * @param idTaskIdResourceType Identifies the specific type of resource that this identifier corresponds to.   - DATASET: A dataset represents an entity modeled in Flyte DataCatalog. A Dataset is also a versioned entity and can be a compilation of multiple individual objects. Eventually all Catalog objects should be modeled similar to Flyte Objects. The Dataset entities makes it possible for the UI  and CLI to act on the objects  in a similar manner to other Flyte objects
      * @param {*} [options] Override http request options.
      */
-    public getTaskExecution (idNodeExecutionIdExecutionIdProject: string, idNodeExecutionIdExecutionIdDomain: string, idNodeExecutionIdExecutionIdName: string, idNodeExecutionIdNodeId: string, idTaskIdProject: string, idTaskIdDomain: string, idTaskIdName: string, idTaskIdVersion: string, idRetryAttempt: number, idTaskIdResourceType?: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', options: any = {}) : Promise<{ response: http.ClientResponse; body: FlyteidladminTaskExecution;  }> {
+    public getTaskExecution (idNodeExecutionIdExecutionIdProject: string, idNodeExecutionIdExecutionIdDomain: string, idNodeExecutionIdExecutionIdName: string, idNodeExecutionIdNodeId: string, idTaskIdProject: string, idTaskIdDomain: string, idTaskIdName: string, idTaskIdVersion: string, idRetryAttempt: number, idTaskIdResourceType?: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', options: any = {}) : Promise<{ response: http.IncomingMessage; body: FlyteidladminTaskExecution;  }> {
         const localVarPath = this.basePath + '/api/v1/task_executions/{id.node_execution_id.execution_id.project}/{id.node_execution_id.execution_id.domain}/{id.node_execution_id.execution_id.name}/{id.node_execution_id.node_id}/{id.task_id.project}/{id.task_id.domain}/{id.task_id.name}/{id.task_id.version}/{id.retry_attempt}'
             .replace('{' + 'id.node_execution_id.execution_id.project' + '}', encodeURIComponent(String(idNodeExecutionIdExecutionIdProject)))
             .replace('{' + 'id.node_execution_id.execution_id.domain' + '}', encodeURIComponent(String(idNodeExecutionIdExecutionIdDomain)))
@@ -10967,7 +10966,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: FlyteidladminTaskExecution;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: FlyteidladminTaskExecution;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10997,7 +10996,7 @@ export class AdminServiceApi {
      * @param idTaskIdResourceType Identifies the specific type of resource that this identifier corresponds to.   - DATASET: A dataset represents an entity modeled in Flyte DataCatalog. A Dataset is also a versioned entity and can be a compilation of multiple individual objects. Eventually all Catalog objects should be modeled similar to Flyte Objects. The Dataset entities makes it possible for the UI  and CLI to act on the objects  in a similar manner to other Flyte objects
      * @param {*} [options] Override http request options.
      */
-    public getTaskExecutionData (idNodeExecutionIdExecutionIdProject: string, idNodeExecutionIdExecutionIdDomain: string, idNodeExecutionIdExecutionIdName: string, idNodeExecutionIdNodeId: string, idTaskIdProject: string, idTaskIdDomain: string, idTaskIdName: string, idTaskIdVersion: string, idRetryAttempt: number, idTaskIdResourceType?: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminTaskExecutionGetDataResponse;  }> {
+    public getTaskExecutionData (idNodeExecutionIdExecutionIdProject: string, idNodeExecutionIdExecutionIdDomain: string, idNodeExecutionIdExecutionIdName: string, idNodeExecutionIdNodeId: string, idTaskIdProject: string, idTaskIdDomain: string, idTaskIdName: string, idTaskIdVersion: string, idRetryAttempt: number, idTaskIdResourceType?: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminTaskExecutionGetDataResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/data/task_executions/{id.node_execution_id.execution_id.project}/{id.node_execution_id.execution_id.domain}/{id.node_execution_id.execution_id.name}/{id.node_execution_id.node_id}/{id.task_id.project}/{id.task_id.domain}/{id.task_id.name}/{id.task_id.version}/{id.retry_attempt}'
             .replace('{' + 'id.node_execution_id.execution_id.project' + '}', encodeURIComponent(String(idNodeExecutionIdExecutionIdProject)))
             .replace('{' + 'id.node_execution_id.execution_id.domain' + '}', encodeURIComponent(String(idNodeExecutionIdExecutionIdDomain)))
@@ -11083,7 +11082,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminTaskExecutionGetDataResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminTaskExecutionGetDataResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11102,7 +11101,7 @@ export class AdminServiceApi {
      * 
      * @param {*} [options] Override http request options.
      */
-    public getVersion (options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminGetVersionResponse;  }> {
+    public getVersion (options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminGetVersionResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/version';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -11130,7 +11129,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminGetVersionResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminGetVersionResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11155,7 +11154,7 @@ export class AdminServiceApi {
      * @param idResourceType Identifies the specific type of resource that this identifier corresponds to.   - DATASET: A dataset represents an entity modeled in Flyte DataCatalog. A Dataset is also a versioned entity and can be a compilation of multiple individual objects. Eventually all Catalog objects should be modeled similar to Flyte Objects. The Dataset entities makes it possible for the UI  and CLI to act on the objects  in a similar manner to other Flyte objects
      * @param {*} [options] Override http request options.
      */
-    public getWorkflow (idProject: string, idDomain: string, idName: string, idVersion: string, idResourceType?: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminWorkflow;  }> {
+    public getWorkflow (idProject: string, idDomain: string, idName: string, idVersion: string, idResourceType?: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminWorkflow;  }> {
         const localVarPath = this.basePath + '/api/v1/workflows/{id.project}/{id.domain}/{id.name}/{id.version}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)))
@@ -11211,7 +11210,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminWorkflow;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminWorkflow;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11235,7 +11234,7 @@ export class AdminServiceApi {
      * @param resourceType Which type of matchable attributes to return. +required.   - TASK_RESOURCE: Applies to customizable task resource requests and limits.  - CLUSTER_RESOURCE: Applies to configuring templated kubernetes cluster resources.  - EXECUTION_QUEUE: Configures task and dynamic task execution queue assignment.  - EXECUTION_CLUSTER_LABEL: Configures the K8s cluster label to be used for execution to be run  - QUALITY_OF_SERVICE_SPECIFICATION: Configures default quality of service when undefined in an execution spec.  - PLUGIN_OVERRIDE: Selects configurable plugin implementation behavior for a given task type.  - WORKFLOW_EXECUTION_CONFIG: Adds defaults for customizable workflow-execution specifications and overrides.  - CLUSTER_ASSIGNMENT: Controls how to select an available cluster on which this execution should run.
      * @param {*} [options] Override http request options.
      */
-    public getWorkflowAttributes (project: string, domain: string, workflow: string, resourceType?: 'TASK_RESOURCE' | 'CLUSTER_RESOURCE' | 'EXECUTION_QUEUE' | 'EXECUTION_CLUSTER_LABEL' | 'QUALITY_OF_SERVICE_SPECIFICATION' | 'PLUGIN_OVERRIDE' | 'WORKFLOW_EXECUTION_CONFIG' | 'CLUSTER_ASSIGNMENT', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminWorkflowAttributesGetResponse;  }> {
+    public getWorkflowAttributes (project: string, domain: string, workflow: string, resourceType?: 'TASK_RESOURCE' | 'CLUSTER_RESOURCE' | 'EXECUTION_QUEUE' | 'EXECUTION_CLUSTER_LABEL' | 'QUALITY_OF_SERVICE_SPECIFICATION' | 'PLUGIN_OVERRIDE' | 'WORKFLOW_EXECUTION_CONFIG' | 'CLUSTER_ASSIGNMENT', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminWorkflowAttributesGetResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/workflow_attributes/{project}/{domain}/{workflow}'
             .replace('{' + 'project' + '}', encodeURIComponent(String(project)))
             .replace('{' + 'domain' + '}', encodeURIComponent(String(domain)))
@@ -11285,7 +11284,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminWorkflowAttributesGetResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminWorkflowAttributesGetResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11311,7 +11310,7 @@ export class AdminServiceApi {
      * @param sortByDirection Indicates the direction to apply sort key for response values. +optional.   - DESCENDING: By default, fields are sorted in descending order.
      * @param {*} [options] Override http request options.
      */
-    public listActiveLaunchPlans (project: string, domain: string, limit?: number, token?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminLaunchPlanList;  }> {
+    public listActiveLaunchPlans (project: string, domain: string, limit?: number, token?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminLaunchPlanList;  }> {
         const localVarPath = this.basePath + '/api/v1/active_launch_plans/{project}/{domain}'
             .replace('{' + 'project' + '}', encodeURIComponent(String(project)))
             .replace('{' + 'domain' + '}', encodeURIComponent(String(domain)));
@@ -11367,7 +11366,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminLaunchPlanList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminLaunchPlanList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11396,7 +11395,7 @@ export class AdminServiceApi {
      * @param sortByDirection Indicates the direction to apply sort key for response values. +optional.   - DESCENDING: By default, fields are sorted in descending order.
      * @param {*} [options] Override http request options.
      */
-    public listDescriptionEntities (resourceType: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', idProject: string, idDomain: string, idName: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminDescriptionEntityList;  }> {
+    public listDescriptionEntities (resourceType: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', idProject: string, idDomain: string, idName: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminDescriptionEntityList;  }> {
         const localVarPath = this.basePath + '/api/v1/description_entities/{resource_type}/{id.project}/{id.domain}/{id.name}'
             .replace('{' + 'resource_type' + '}', encodeURIComponent(String(resourceType)))
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
@@ -11468,7 +11467,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminDescriptionEntityList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminDescriptionEntityList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11497,7 +11496,7 @@ export class AdminServiceApi {
      * @param sortByDirection Indicates the direction to apply sort key for response values. +optional.   - DESCENDING: By default, fields are sorted in descending order.
      * @param {*} [options] Override http request options.
      */
-    public listDescriptionEntities2 (resourceType: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', idProject: string, idDomain: string, idName?: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminDescriptionEntityList;  }> {
+    public listDescriptionEntities2 (resourceType: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', idProject: string, idDomain: string, idName?: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminDescriptionEntityList;  }> {
         const localVarPath = this.basePath + '/api/v1/description_entities/{resource_type}/{id.project}/{id.domain}'
             .replace('{' + 'resource_type' + '}', encodeURIComponent(String(resourceType)))
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
@@ -11567,7 +11566,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminDescriptionEntityList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminDescriptionEntityList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11595,7 +11594,7 @@ export class AdminServiceApi {
      * @param sortByDirection Indicates the direction to apply sort key for response values. +optional.   - DESCENDING: By default, fields are sorted in descending order.
      * @param {*} [options] Override http request options.
      */
-    public listExecutions (idProject: string, idDomain: string, idName?: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminExecutionList;  }> {
+    public listExecutions (idProject: string, idDomain: string, idName?: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminExecutionList;  }> {
         const localVarPath = this.basePath + '/api/v1/executions/{id.project}/{id.domain}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)));
@@ -11659,7 +11658,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminExecutionList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminExecutionList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11686,7 +11685,7 @@ export class AdminServiceApi {
      * @param filters Indicates a list of filters passed as string. +optional.
      * @param {*} [options] Override http request options.
      */
-    public listLaunchPlanIds (project: string, domain: string, limit?: number, token?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', filters?: string, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminNamedEntityIdentifierList;  }> {
+    public listLaunchPlanIds (project: string, domain: string, limit?: number, token?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', filters?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminNamedEntityIdentifierList;  }> {
         const localVarPath = this.basePath + '/api/v1/launch_plan_ids/{project}/{domain}'
             .replace('{' + 'project' + '}', encodeURIComponent(String(project)))
             .replace('{' + 'domain' + '}', encodeURIComponent(String(domain)));
@@ -11746,7 +11745,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminNamedEntityIdentifierList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminNamedEntityIdentifierList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11774,7 +11773,7 @@ export class AdminServiceApi {
      * @param sortByDirection Indicates the direction to apply sort key for response values. +optional.   - DESCENDING: By default, fields are sorted in descending order.
      * @param {*} [options] Override http request options.
      */
-    public listLaunchPlans (idProject: string, idDomain: string, idName: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminLaunchPlanList;  }> {
+    public listLaunchPlans (idProject: string, idDomain: string, idName: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminLaunchPlanList;  }> {
         const localVarPath = this.basePath + '/api/v1/launch_plans/{id.project}/{id.domain}/{id.name}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)))
@@ -11840,7 +11839,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminLaunchPlanList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminLaunchPlanList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11868,7 +11867,7 @@ export class AdminServiceApi {
      * @param sortByDirection Indicates the direction to apply sort key for response values. +optional.   - DESCENDING: By default, fields are sorted in descending order.
      * @param {*} [options] Override http request options.
      */
-    public listLaunchPlans2 (idProject: string, idDomain: string, idName?: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminLaunchPlanList;  }> {
+    public listLaunchPlans2 (idProject: string, idDomain: string, idName?: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminLaunchPlanList;  }> {
         const localVarPath = this.basePath + '/api/v1/launch_plans/{id.project}/{id.domain}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)));
@@ -11932,7 +11931,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminLaunchPlanList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminLaunchPlanList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11953,7 +11952,7 @@ export class AdminServiceApi {
      * @param resourceType +required.   - TASK_RESOURCE: Applies to customizable task resource requests and limits.  - CLUSTER_RESOURCE: Applies to configuring templated kubernetes cluster resources.  - EXECUTION_QUEUE: Configures task and dynamic task execution queue assignment.  - EXECUTION_CLUSTER_LABEL: Configures the K8s cluster label to be used for execution to be run  - QUALITY_OF_SERVICE_SPECIFICATION: Configures default quality of service when undefined in an execution spec.  - PLUGIN_OVERRIDE: Selects configurable plugin implementation behavior for a given task type.  - WORKFLOW_EXECUTION_CONFIG: Adds defaults for customizable workflow-execution specifications and overrides.  - CLUSTER_ASSIGNMENT: Controls how to select an available cluster on which this execution should run.
      * @param {*} [options] Override http request options.
      */
-    public listMatchableAttributes (resourceType?: 'TASK_RESOURCE' | 'CLUSTER_RESOURCE' | 'EXECUTION_QUEUE' | 'EXECUTION_CLUSTER_LABEL' | 'QUALITY_OF_SERVICE_SPECIFICATION' | 'PLUGIN_OVERRIDE' | 'WORKFLOW_EXECUTION_CONFIG' | 'CLUSTER_ASSIGNMENT', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminListMatchableAttributesResponse;  }> {
+    public listMatchableAttributes (resourceType?: 'TASK_RESOURCE' | 'CLUSTER_RESOURCE' | 'EXECUTION_QUEUE' | 'EXECUTION_CLUSTER_LABEL' | 'QUALITY_OF_SERVICE_SPECIFICATION' | 'PLUGIN_OVERRIDE' | 'WORKFLOW_EXECUTION_CONFIG' | 'CLUSTER_ASSIGNMENT', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminListMatchableAttributesResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/matchable_attributes';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -11985,7 +11984,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminListMatchableAttributesResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminListMatchableAttributesResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12013,7 +12012,7 @@ export class AdminServiceApi {
      * @param filters Indicates a list of filters passed as string. +optional.
      * @param {*} [options] Override http request options.
      */
-    public listNamedEntities (resourceType: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', project: string, domain: string, limit?: number, token?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', filters?: string, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminNamedEntityList;  }> {
+    public listNamedEntities (resourceType: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', project: string, domain: string, limit?: number, token?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', filters?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminNamedEntityList;  }> {
         const localVarPath = this.basePath + '/api/v1/named_entities/{resource_type}/{project}/{domain}'
             .replace('{' + 'resource_type' + '}', encodeURIComponent(String(resourceType)))
             .replace('{' + 'project' + '}', encodeURIComponent(String(project)))
@@ -12079,7 +12078,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminNamedEntityList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminNamedEntityList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12108,7 +12107,7 @@ export class AdminServiceApi {
      * @param uniqueParentId Unique identifier of the parent node in the execution +optional.
      * @param {*} [options] Override http request options.
      */
-    public listNodeExecutions (workflowExecutionIdProject: string, workflowExecutionIdDomain: string, workflowExecutionIdName: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', uniqueParentId?: string, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminNodeExecutionList;  }> {
+    public listNodeExecutions (workflowExecutionIdProject: string, workflowExecutionIdDomain: string, workflowExecutionIdName: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', uniqueParentId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminNodeExecutionList;  }> {
         const localVarPath = this.basePath + '/api/v1/node_executions/{workflow_execution_id.project}/{workflow_execution_id.domain}/{workflow_execution_id.name}'
             .replace('{' + 'workflow_execution_id.project' + '}', encodeURIComponent(String(workflowExecutionIdProject)))
             .replace('{' + 'workflow_execution_id.domain' + '}', encodeURIComponent(String(workflowExecutionIdDomain)))
@@ -12178,7 +12177,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminNodeExecutionList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminNodeExecutionList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12213,7 +12212,7 @@ export class AdminServiceApi {
      * @param sortByDirection Indicates the direction to apply sort key for response values. +optional.   - DESCENDING: By default, fields are sorted in descending order.
      * @param {*} [options] Override http request options.
      */
-    public listNodeExecutionsForTask (taskExecutionIdNodeExecutionIdExecutionIdProject: string, taskExecutionIdNodeExecutionIdExecutionIdDomain: string, taskExecutionIdNodeExecutionIdExecutionIdName: string, taskExecutionIdNodeExecutionIdNodeId: string, taskExecutionIdTaskIdProject: string, taskExecutionIdTaskIdDomain: string, taskExecutionIdTaskIdName: string, taskExecutionIdTaskIdVersion: string, taskExecutionIdRetryAttempt: number, taskExecutionIdTaskIdResourceType?: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminNodeExecutionList;  }> {
+    public listNodeExecutionsForTask (taskExecutionIdNodeExecutionIdExecutionIdProject: string, taskExecutionIdNodeExecutionIdExecutionIdDomain: string, taskExecutionIdNodeExecutionIdExecutionIdName: string, taskExecutionIdNodeExecutionIdNodeId: string, taskExecutionIdTaskIdProject: string, taskExecutionIdTaskIdDomain: string, taskExecutionIdTaskIdName: string, taskExecutionIdTaskIdVersion: string, taskExecutionIdRetryAttempt: number, taskExecutionIdTaskIdResourceType?: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminNodeExecutionList;  }> {
         const localVarPath = this.basePath + '/api/v1/children/task_executions/{task_execution_id.node_execution_id.execution_id.project}/{task_execution_id.node_execution_id.execution_id.domain}/{task_execution_id.node_execution_id.execution_id.name}/{task_execution_id.node_execution_id.node_id}/{task_execution_id.task_id.project}/{task_execution_id.task_id.domain}/{task_execution_id.task_id.name}/{task_execution_id.task_id.version}/{task_execution_id.retry_attempt}'
             .replace('{' + 'task_execution_id.node_execution_id.execution_id.project' + '}', encodeURIComponent(String(taskExecutionIdNodeExecutionIdExecutionIdProject)))
             .replace('{' + 'task_execution_id.node_execution_id.execution_id.domain' + '}', encodeURIComponent(String(taskExecutionIdNodeExecutionIdExecutionIdDomain)))
@@ -12319,7 +12318,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminNodeExecutionList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminNodeExecutionList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12344,7 +12343,7 @@ export class AdminServiceApi {
      * @param sortByDirection Indicates the direction to apply sort key for response values. +optional.   - DESCENDING: By default, fields are sorted in descending order.
      * @param {*} [options] Override http request options.
      */
-    public listProjects (limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminProjects;  }> {
+    public listProjects (limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminProjects;  }> {
         const localVarPath = this.basePath + '/api/v1/projects';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -12392,7 +12391,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminProjects;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminProjects;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12421,7 +12420,7 @@ export class AdminServiceApi {
      * @param sortByDirection Indicates the direction to apply sort key for response values. +optional.   - DESCENDING: By default, fields are sorted in descending order.
      * @param {*} [options] Override http request options.
      */
-    public listTaskExecutions (nodeExecutionIdExecutionIdProject: string, nodeExecutionIdExecutionIdDomain: string, nodeExecutionIdExecutionIdName: string, nodeExecutionIdNodeId: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminTaskExecutionList;  }> {
+    public listTaskExecutions (nodeExecutionIdExecutionIdProject: string, nodeExecutionIdExecutionIdDomain: string, nodeExecutionIdExecutionIdName: string, nodeExecutionIdNodeId: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminTaskExecutionList;  }> {
         const localVarPath = this.basePath + '/api/v1/task_executions/{node_execution_id.execution_id.project}/{node_execution_id.execution_id.domain}/{node_execution_id.execution_id.name}/{node_execution_id.node_id}'
             .replace('{' + 'node_execution_id.execution_id.project' + '}', encodeURIComponent(String(nodeExecutionIdExecutionIdProject)))
             .replace('{' + 'node_execution_id.execution_id.domain' + '}', encodeURIComponent(String(nodeExecutionIdExecutionIdDomain)))
@@ -12493,7 +12492,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminTaskExecutionList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminTaskExecutionList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12520,7 +12519,7 @@ export class AdminServiceApi {
      * @param filters Indicates a list of filters passed as string. +optional.
      * @param {*} [options] Override http request options.
      */
-    public listTaskIds (project: string, domain: string, limit?: number, token?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', filters?: string, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminNamedEntityIdentifierList;  }> {
+    public listTaskIds (project: string, domain: string, limit?: number, token?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', filters?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminNamedEntityIdentifierList;  }> {
         const localVarPath = this.basePath + '/api/v1/task_ids/{project}/{domain}'
             .replace('{' + 'project' + '}', encodeURIComponent(String(project)))
             .replace('{' + 'domain' + '}', encodeURIComponent(String(domain)));
@@ -12580,7 +12579,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminNamedEntityIdentifierList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminNamedEntityIdentifierList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12608,7 +12607,7 @@ export class AdminServiceApi {
      * @param sortByDirection Indicates the direction to apply sort key for response values. +optional.   - DESCENDING: By default, fields are sorted in descending order.
      * @param {*} [options] Override http request options.
      */
-    public listTasks (idProject: string, idDomain: string, idName: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminTaskList;  }> {
+    public listTasks (idProject: string, idDomain: string, idName: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminTaskList;  }> {
         const localVarPath = this.basePath + '/api/v1/tasks/{id.project}/{id.domain}/{id.name}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)))
@@ -12674,7 +12673,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminTaskList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminTaskList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12702,7 +12701,7 @@ export class AdminServiceApi {
      * @param sortByDirection Indicates the direction to apply sort key for response values. +optional.   - DESCENDING: By default, fields are sorted in descending order.
      * @param {*} [options] Override http request options.
      */
-    public listTasks2 (idProject: string, idDomain: string, idName?: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminTaskList;  }> {
+    public listTasks2 (idProject: string, idDomain: string, idName?: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminTaskList;  }> {
         const localVarPath = this.basePath + '/api/v1/tasks/{id.project}/{id.domain}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)));
@@ -12766,7 +12765,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminTaskList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminTaskList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12793,7 +12792,7 @@ export class AdminServiceApi {
      * @param filters Indicates a list of filters passed as string. +optional.
      * @param {*} [options] Override http request options.
      */
-    public listWorkflowIds (project: string, domain: string, limit?: number, token?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', filters?: string, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminNamedEntityIdentifierList;  }> {
+    public listWorkflowIds (project: string, domain: string, limit?: number, token?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', filters?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminNamedEntityIdentifierList;  }> {
         const localVarPath = this.basePath + '/api/v1/workflow_ids/{project}/{domain}'
             .replace('{' + 'project' + '}', encodeURIComponent(String(project)))
             .replace('{' + 'domain' + '}', encodeURIComponent(String(domain)));
@@ -12853,7 +12852,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminNamedEntityIdentifierList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminNamedEntityIdentifierList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12881,7 +12880,7 @@ export class AdminServiceApi {
      * @param sortByDirection Indicates the direction to apply sort key for response values. +optional.   - DESCENDING: By default, fields are sorted in descending order.
      * @param {*} [options] Override http request options.
      */
-    public listWorkflows (idProject: string, idDomain: string, idName: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminWorkflowList;  }> {
+    public listWorkflows (idProject: string, idDomain: string, idName: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminWorkflowList;  }> {
         const localVarPath = this.basePath + '/api/v1/workflows/{id.project}/{id.domain}/{id.name}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)))
@@ -12947,7 +12946,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminWorkflowList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminWorkflowList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12975,7 +12974,7 @@ export class AdminServiceApi {
      * @param sortByDirection Indicates the direction to apply sort key for response values. +optional.   - DESCENDING: By default, fields are sorted in descending order.
      * @param {*} [options] Override http request options.
      */
-    public listWorkflows2 (idProject: string, idDomain: string, idName?: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminWorkflowList;  }> {
+    public listWorkflows2 (idProject: string, idDomain: string, idName?: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminWorkflowList;  }> {
         const localVarPath = this.basePath + '/api/v1/workflows/{id.project}/{id.domain}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)));
@@ -13039,7 +13038,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminWorkflowList;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminWorkflowList;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13060,7 +13059,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public recoverExecution (body: AdminExecutionRecoverRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminExecutionCreateResponse;  }> {
+    public recoverExecution (body: AdminExecutionRecoverRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminExecutionCreateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/executions/recover';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -13094,7 +13093,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminExecutionCreateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminExecutionCreateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13115,7 +13114,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public registerProject (body: AdminProjectRegisterRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminProjectRegisterResponse;  }> {
+    public registerProject (body: AdminProjectRegisterRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminProjectRegisterResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/projects';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -13149,7 +13148,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminProjectRegisterResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminProjectRegisterResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13170,7 +13169,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public relaunchExecution (body: AdminExecutionRelaunchRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminExecutionCreateResponse;  }> {
+    public relaunchExecution (body: AdminExecutionRelaunchRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminExecutionCreateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/executions/relaunch';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -13204,7 +13203,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminExecutionCreateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminExecutionCreateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13228,7 +13227,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public terminateExecution (idProject: string, idDomain: string, idName: string, body: AdminExecutionTerminateRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminExecutionTerminateResponse;  }> {
+    public terminateExecution (idProject: string, idDomain: string, idName: string, body: AdminExecutionTerminateRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminExecutionTerminateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/executions/{id.project}/{id.domain}/{id.name}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)))
@@ -13280,7 +13279,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminExecutionTerminateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminExecutionTerminateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13304,7 +13303,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public updateExecution (idProject: string, idDomain: string, idName: string, body: AdminExecutionUpdateRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminExecutionUpdateResponse;  }> {
+    public updateExecution (idProject: string, idDomain: string, idName: string, body: AdminExecutionUpdateRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminExecutionUpdateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/executions/{id.project}/{id.domain}/{id.name}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)))
@@ -13356,7 +13355,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminExecutionUpdateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminExecutionUpdateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13381,7 +13380,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public updateLaunchPlan (idProject: string, idDomain: string, idName: string, idVersion: string, body: AdminLaunchPlanUpdateRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminLaunchPlanUpdateResponse;  }> {
+    public updateLaunchPlan (idProject: string, idDomain: string, idName: string, idVersion: string, body: AdminLaunchPlanUpdateRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminLaunchPlanUpdateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/launch_plans/{id.project}/{id.domain}/{id.name}/{id.version}'
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
             .replace('{' + 'id.domain' + '}', encodeURIComponent(String(idDomain)))
@@ -13439,7 +13438,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminLaunchPlanUpdateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminLaunchPlanUpdateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13464,7 +13463,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public updateNamedEntity (resourceType: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', idProject: string, idDomain: string, idName: string, body: AdminNamedEntityUpdateRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminNamedEntityUpdateResponse;  }> {
+    public updateNamedEntity (resourceType: 'UNSPECIFIED' | 'TASK' | 'WORKFLOW' | 'LAUNCH_PLAN' | 'DATASET', idProject: string, idDomain: string, idName: string, body: AdminNamedEntityUpdateRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminNamedEntityUpdateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/named_entities/{resource_type}/{id.project}/{id.domain}/{id.name}'
             .replace('{' + 'resource_type' + '}', encodeURIComponent(String(resourceType)))
             .replace('{' + 'id.project' + '}', encodeURIComponent(String(idProject)))
@@ -13522,7 +13521,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminNamedEntityUpdateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminNamedEntityUpdateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13544,7 +13543,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public updateProject (id: string, body: AdminProject, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminProjectUpdateResponse;  }> {
+    public updateProject (id: string, body: AdminProject, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminProjectUpdateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/projects/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -13584,7 +13583,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminProjectUpdateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminProjectUpdateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13606,7 +13605,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public updateProjectAttributes (attributesProject: string, body: AdminProjectAttributesUpdateRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminProjectAttributesUpdateResponse;  }> {
+    public updateProjectAttributes (attributesProject: string, body: AdminProjectAttributesUpdateRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminProjectAttributesUpdateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/project_attributes/{attributes.project}'
             .replace('{' + 'attributes.project' + '}', encodeURIComponent(String(attributesProject)));
         let localVarQueryParameters: any = {};
@@ -13646,7 +13645,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminProjectAttributesUpdateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminProjectAttributesUpdateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13669,7 +13668,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public updateProjectDomainAttributes (attributesProject: string, attributesDomain: string, body: AdminProjectDomainAttributesUpdateRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminProjectDomainAttributesUpdateResponse;  }> {
+    public updateProjectDomainAttributes (attributesProject: string, attributesDomain: string, body: AdminProjectDomainAttributesUpdateRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminProjectDomainAttributesUpdateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/project_domain_attributes/{attributes.project}/{attributes.domain}'
             .replace('{' + 'attributes.project' + '}', encodeURIComponent(String(attributesProject)))
             .replace('{' + 'attributes.domain' + '}', encodeURIComponent(String(attributesDomain)));
@@ -13715,7 +13714,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminProjectDomainAttributesUpdateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminProjectDomainAttributesUpdateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13739,7 +13738,7 @@ export class AdminServiceApi {
      * @param body 
      * @param {*} [options] Override http request options.
      */
-    public updateWorkflowAttributes (attributesProject: string, attributesDomain: string, attributesWorkflow: string, body: AdminWorkflowAttributesUpdateRequest, options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminWorkflowAttributesUpdateResponse;  }> {
+    public updateWorkflowAttributes (attributesProject: string, attributesDomain: string, attributesWorkflow: string, body: AdminWorkflowAttributesUpdateRequest, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AdminWorkflowAttributesUpdateResponse;  }> {
         const localVarPath = this.basePath + '/api/v1/workflow_attributes/{attributes.project}/{attributes.domain}/{attributes.workflow}'
             .replace('{' + 'attributes.project' + '}', encodeURIComponent(String(attributesProject)))
             .replace('{' + 'attributes.domain' + '}', encodeURIComponent(String(attributesDomain)))
@@ -13791,7 +13790,7 @@ export class AdminServiceApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AdminWorkflowAttributesUpdateResponse;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AdminWorkflowAttributesUpdateResponse;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);

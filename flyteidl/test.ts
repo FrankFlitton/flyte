@@ -2,11 +2,7 @@ import {
   AdminExecutionCreateRequest,
   AdminExecutionMetadata,
   AdminExecutionSpec,
-  // AdminExecutionList,
   AdminServiceApi,
-  // CoreIdentifier,
-  // FlyteidladminTaskCreateRequest,
-  // FlyteidladminTaskExecution,
 } from "./gen/pb-node/flyteidl/service/flyteadmin/api";
 import { flyteidl } from "./gen/pb-js/flyteidl";
 
@@ -22,25 +18,27 @@ const flyteAdmin = new AdminServiceApi(basePath);
 const authToken = "";
 const filters = "";
 
-flyteAdmin
-  .listProjects(0, authToken, filters, "name", "DESCENDING", {})
-  .then((res) => {
-    console.log(res.body.projects);
-  })
-  .catch((err) => {
-    throw err;
-  });
+// .listProjects(0, authToken, filters, "name", "DESCENDING", {})
+const main = async () => {
+  const projects = (await flyteAdmin.listProjects()).body.projects;
+  const project = projects[0];
+  const workflows = (await flyteAdmin.listWorkflows(
+    project.id,
+    project.domains[0].id,
+    ""
+  )).body.workflows;
+
+  console.log(workflows);
+};
 
 
+// const executionRequest = new AdminExecutionCreateRequest();
+// executionRequest.project = "flytesnacks";
+// executionRequest.domain = "development";
+// executionRequest.name = "my-task";
 
-const executionRequest = new AdminExecutionCreateRequest()
-executionRequest.project = "flytesnacks"
-executionRequest.domain = "development"
-executionRequest.name = "my-task"
-
-const executionSpec = new AdminExecutionSpec()
-executionSpec.metadata = new AdminExecutionMetadata();
-
+// const executionSpec = new AdminExecutionSpec();
+// executionSpec.metadata = new AdminExecutionMetadata();
 
 // idProject: string, idDomain: string, idName?: string, limit?: number, token?: string, filters?: string, sortByKey?: string, sortByDirection?: 'DESCENDING' | 'ASCENDING', options: any = {}) : Promise<{ response: http.ClientResponse; body: AdminExecutionList;  }>
 // flyteAdmin.listExecutions(
