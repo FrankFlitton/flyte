@@ -84,7 +84,7 @@ docker run --rm -u $(id -u):$(id -g) --rm -v $DIR:/defs $SWAGGER_CLI_IMAGE gener
 docker run --rm -u $(id -u):$(id -g) --rm -v $DIR:/defs $SWAGGER_CLI_IMAGE generate -i /defs/gen/pb-go/flyteidl/service/admin.swagger.json -l typescript-fetch -o /defs/gen/pb-js/flyteidl/service/flyteadmin
 
 # # Generate Javascript API client code
-docker run --rm -u $(id -u):$(id -g) --rm -v $DIR:/defs $SWAGGER_CLI_IMAGE generate -i /defs/gen/pb-go/flyteidl/service/admin.swagger.json -l typescript-node -o /defs/gen/pb-node/flyteidl/service/flyteadmin
+docker run --rm -u $(id -u):$(id -g) --rm -v $DIR:/defs $SWAGGER_CLI_IMAGE generate -i /defs/gen/pb-go/flyteidl/service/admin.swagger.json -l typescript-node -DsupportsES6=true --additional-properties=packageName=flyteadmin -o /defs/gen/pb-node/flyteidl/service/flyteadmin
 
 # Remove documentation generated from the swagger-codegen-cli
 rm -rf gen/pb-go/flyteidl/service/flyteadmin/docs

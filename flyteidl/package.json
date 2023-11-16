@@ -17,9 +17,18 @@
     "protos",
     "gen/pb-js"
   ],
+  "scripts": {
+    "generate": "npx buf generate --template buf.gen.es.yaml",
+    "test:es": "npx ts-node ./test.es.ts"
+  },
   "devDependencies": {
     "@bufbuild/buf": "^1.27.2",
     "@bufbuild/protobuf": "^1.4.2",
     "@bufbuild/protoc-gen-es": "^1.4.2"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "protobufjs": "^7.2.5",
+    "request": "^2.88.2"
   }
 }
