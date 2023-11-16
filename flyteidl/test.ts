@@ -20,17 +20,26 @@ const filters = "";
 
 // .listProjects(0, authToken, filters, "name", "DESCENDING", {})
 const main = async () => {
-  const projects = (await flyteAdmin.listProjects()).body.projects;
-  const project = projects[0];
-  const workflows = (await flyteAdmin.listWorkflows(
-    project.id,
-    project.domains[0].id,
-    ""
-  )).body.workflows;
+  try {
+    const projects = (await flyteAdmin.listProjects()).body.projects;
+    const project = projects[0];
 
-  console.log(workflows);
+    const workflows = (
+      await flyteAdmin.listWorkflows(
+        project.id,
+        project.domains.find((d) => d.id === "development").id,
+        "",
+        10
+      )
+    ).body.workflows;
+
+    console.log(workflows);
+  } catch (err) {
+    console.log(err);
+  }
 };
 
+void main();
 
 // const executionRequest = new AdminExecutionCreateRequest();
 // executionRequest.project = "flytesnacks";
